@@ -513,6 +513,8 @@ if [ $UPDATE_AVAILABLE -eq 1 ]; then
         log_info "Changes:"
         git log --oneline "$CURRENT_COMMIT..$NEW_COMMIT" | head -n 10 | tee -a "$LOG_FILE"
     fi
+else
+    NEW_COMMIT="$CURRENT_COMMIT"
 fi
 
 # ==========================================
